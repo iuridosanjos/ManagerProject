@@ -70,7 +70,7 @@ private static final long serialVersionUID = 1L;
 		this.calendario = calendario;
 	}
 	public List<Membro> getMembros() {
-		
+		return membros;
 	}
 	public List<Tarefa> getTarefas() {
 		return tarefas;
