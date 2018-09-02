@@ -1,6 +1,7 @@
 package com.cesarschool.ManagerProject.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -32,7 +33,10 @@ private static final long serialVersionUID = 1L;
 	private Calendario calendario;
 
 	@OneToMany
-	private List<Membro> membro;
+	private List<Membro> membros = new ArrayList<Membro>();
+	
+	@OneToMany
+	private List<Tarefa> tarefas = new ArrayList<Tarefa>();
 	
 	public long getCodigo() {
 		return codigo;
@@ -58,6 +62,18 @@ private static final long serialVersionUID = 1L;
 	}
 	public void setDataInicio(String dataInicio) {
 		this.dataInicio = dataInicio;
+	}
+	public Calendario getCalendario() {
+		return calendario;
+	}
+	public void setCalendario(Calendario calendario) {
+		this.calendario = calendario;
+	}
+	public List<Membro> getMembros() {
+		
+	}
+	public List<Tarefa> getTarefas() {
+		return tarefas;
 	}
 	
 }
